@@ -1,0 +1,27 @@
+# Local build dependencies and outputs
+/.tools/
+/dist/
+/artifacts/
+/out/
+/build/
+
+# Local workspaces
+/work/
+/in/
+/test-profile/
+/qa-profile/
+**/recovery.json
+**/settings.json
+
+# Credentials and machine-specific files
+.env
+.env.*
+*.pfx
+*.p12
+*.key
+*.user
+*.suo
+
+# Logs and temporary files
+*.log
+*.tmp
