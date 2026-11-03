@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>MD Show</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="vendor/purify.js"></script>
+  <script defer src="core.js"></script>
+  <script defer src="i18n.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" title="MD Show"><img class="brand-logo" src="logo.png" width="24" height="24" alt="MD Show"></div>
+    <div class="top-actions">
+      <div class="menu-anchor"><button id="menu-toggle" aria-controls="menu" aria-expanded="false" title="File · Alt+F" data-i18n-title="menu" data-shortcut="Alt+F"><span data-i18n="menu">File</span></button>
+        <div id="menu" class="menu" hidden>
+          <button data-action="new"><span data-i18n="new">New document</span><kbd>Ctrl N</kbd></button>
+          <button data-action="open"><span data-i18n="open">Open</span><kbd>Ctrl O</kbd></button><hr>
+          <button data-action="save"><span data-i18n="save">Save</span><kbd>Ctrl S</kbd></button>
+          <button data-action="saveAs"><span data-i18n="saveAs">Save as…</span><kbd>Ctrl Shift S</kbd></button>
+          <hr>
+          <button data-action="exportHtml"><span data-i18n="exportHtml">Export HTML…</span></button>
+          <button data-action="exportPdf"><span data-i18n="exportPdf">Export PDF…</span></button>
+          <button data-action="print"><span data-i18n="print">Print…</span><kbd>Ctrl P</kbd></button><hr>
+          <button data-action="close"><span data-i18n="helpClose">Close tab</span><kbd>Ctrl W</kbd></button><hr>
+          <details class="menu-settings"><summary data-i18n="preferences">Preferences</summary>
+          <button data-action="sidebar"><span data-i18n="sidebar">Toggle outline</span></button>
+          <button data-action="theme"><span data-i18n="theme">Theme</span><span id="theme-label">System</span></button>
+          <button data-action="wrap"><span data-i18n="wrap">Word wrap</span><span id="wrap-label">On</span></button>
+          <label class="language-setting" for="language"><span data-i18n="language">Language</span><select id="language"><option value="auto" data-i18n="auto">Automatic (Windows)</option><option value="ru-RU">Русский</option><option value="en-US">English</option><option value="de-DE">Deutsch</option><option value="ar">العربية</option><option value="zh-CN">简体中文</option></select></label>
+          <button data-action="defaultApps"><span data-i18n="defaultApps">Windows default apps</span></button>
+          </details>
+          <button data-action="help"><span data-i18n="help">Keyboard shortcuts</span><kbd>F1</kbd></button>
+          <button data-action="about"><span data-i18n="about">About MD Show</span></button>
+          <hr><button data-action="exit"><span data-i18n="exit">Exit</span><kbd>Alt F4</kbd></button>
+        </div>
+      </div>
+      <button data-action="save" class="icon-button save-button" title="Save · Ctrl+S" data-i18n-title="save" data-shortcut="Ctrl+S" aria-label="Save" data-i18n-aria-label="save"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12l4 4v12a2 2 0 0 1-2 2Z"/><path d="M7 21v-8h10v8M7 3v5h9V3"/></svg></button>
+      <button data-action="find" class="icon-button search-button" title="Find and replace" data-i18n-title="find" data-shortcut="Ctrl+F" aria-label="Find and replace" data-i18n-aria-label="find"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></button>
+    </div>
+      <div class="document-toolbar">
+        <div class="segmented" role="group" aria-label="View mode" data-i18n-aria-label="view"><button data-mode="edit" title="Editor" data-i18n-title="edit" data-shortcut="Ctrl+1"><span data-i18n="edit">Editor</span></button><button data-mode="split" class="selected" title="Split view" data-i18n-title="split" data-shortcut="Ctrl+2"><span data-i18n="split">Split view</span></button><button data-mode="read" title="Read" data-i18n-title="read" data-shortcut="Ctrl+3"><span data-i18n="read">Read</span></button></div>
+        <div class="zoom-control" role="group" aria-label="Document zoom" data-i18n-aria-label="zoom">
+          <button id="zoom-out" data-action="zoomOut" title="Zoom out" data-i18n-title="zoomOut" data-shortcut="Ctrl+−" aria-label="Zoom out" data-i18n-aria-label="zoomOut">−</button>
+          <button id="zoom" data-action="zoomReset" title="100% · Ctrl+0" aria-label="100%">100%</button>
+          <button id="zoom-in" data-action="zoomIn" title="Zoom in" data-i18n-title="zoomIn" data-shortcut="Ctrl++" aria-label="Zoom in" data-i18n-aria-label="zoomIn">+</button>
+        </div>
+      </div>
+  </header>
+  <div class="tabsbar"><div id="tabs" role="tablist" aria-label="Documents" data-i18n-aria-label="documents"></div><button data-action="new" class="new-tab" title="New document" data-i18n-title="new" data-shortcut="Ctrl+N" aria-label="New document" data-i18n-aria-label="new">+</button></div>
+  <main class="workspace">
+    <aside id="sidebar">
+      <div class="side-heading"><span data-i18n="navigation">NAVIGATION</span><button data-action="sidebar" title="Hide outline" data-i18n-title="hideOutline" aria-label="Hide outline" data-i18n-aria-label="hideOutline">‹</button></div>
+      <div class="side-section-title"><span data-i18n="outline">Outline</span><span id="heading-count">0</span></div>
+      <nav id="outline" aria-label="Outline" data-i18n-aria-label="outline"></nav>
+      <section class="recent-section"><div class="side-section-title"><span data-i18n="recent">Recent files</span></div><div id="recent"></div></section>
+      <div class="local-note"><span class="dot"></span><span data-i18n="local">Locally on your computer</span></div>
+    </aside>
+    <section class="document-area">
+      <div id="findbar" hidden>
+        <input id="find" type="text" placeholder="Find in document" data-i18n-placeholder="findPlaceholder" aria-label="Find in document" data-i18n-aria-label="findPlaceholder">
+        <span id="find-count" aria-live="polite"></span><button data-action="previous" title="Previous match" data-i18n-title="previous" data-shortcut="Shift+Enter">↑</button><button data-action="next" title="Next match" data-i18n-title="next" data-shortcut="Enter">↓</button>
+        <label title="Match case" data-i18n-title="matchCase"><input id="match-case" type="checkbox"> Aa</label>
+        <input id="replacement" type="text" placeholder="Replace with" data-i18n-placeholder="replacement" aria-label="Replace with" data-i18n-aria-label="replacement">
+        <button data-action="replace"><span data-i18n="replace">Replace</span></button><button data-action="replaceAll"><span data-i18n="replaceAll">Replace all</span></button><button data-action="closeFind" aria-label="Close search" data-i18n-aria-label="closeFind">×</button>
+      </div>
+      <div id="formatbar">
+        <button data-format="bold" title="Bold" data-i18n-title="bold" data-shortcut="Ctrl+B"><b>B</b></button><button data-format="italic" title="Italic" data-i18n-title="italic" data-shortcut="Ctrl+I"><i>I</i></button><button data-format="strike" title="Strikethrough" data-i18n-title="strike"><s>S</s></button><span class="divider"></span>
+        <button data-format="heading" title="Heading" data-i18n-title="heading">H₂</button><button data-format="quote" title="Quote" data-i18n-title="quote">❞</button><button data-format="list" title="List" data-i18n-title="list">≡</button><button data-format="task" title="Task" data-i18n-title="task">☑</button><span class="divider"></span>
+        <button data-format="link" title="Link" data-i18n-title="link" data-shortcut="Ctrl+K">↗</button><button data-format="code" title="Code" data-i18n-title="code">&lt;/&gt;</button><button data-format="table" title="Table" data-i18n-title="table">▦</button>
+        <div class="format-spacer"></div><button data-action="undo" title="Undo" data-i18n-title="undo" data-shortcut="Ctrl+Z">↶</button><button data-action="redo" title="Redo" data-i18n-title="redo" data-shortcut="Ctrl+Y">↷</button>
+      </div>
+      <div id="panes" class="panes mode-split">
+        <section id="editor-pane"><div class="pane-heading"><span><span data-i18n="source">SOURCE</span></span><span>Markdown</span></div><div id="editors"></div></section>
+        <div id="splitter" role="separator" aria-label="Panel width" data-i18n-aria-label="panelWidth" aria-orientation="vertical" tabindex="0"></div>
+        <section id="preview-pane"><div class="pane-heading"><span><span data-i18n="preview">PREVIEW</span></span><span class="live"><span class="dot"></span><span data-i18n="live">Live preview</span></span></div><div id="preview-scroll" tabindex="0" aria-label="Preview" data-i18n-aria-label="preview"><article dir="auto" id="preview" class="markdown"></article></div></section>
+      </div>
+      <footer class="statusbar"><span id="position">Ln 1, Col 1</span><span id="words">Words: 0</span><span class="status-spacer"></span><span id="encoding">UTF-8</span><span id="newline">CRLF</span></footer>
+    </section>
+  </main>
+  <div id="toast" role="status" hidden></div>
+  <dialog id="help"><h2><span data-i18n="helpTitle">Everything at your fingertips</span></h2><p><span data-i18n="help">Keyboard shortcuts</span></p><dl><dt><span data-i18n="helpOpen">Open / New</span></dt><dd>Ctrl+O / Ctrl+N</dd><dt><span data-i18n="helpSave">Save / Save as</span></dt><dd>Ctrl+S / Ctrl+Shift+S</dd><dt><span data-i18n="helpClose">Close tab</span></dt><dd>Ctrl+W</dd><dt><span data-i18n="helpTab">Next / previous tab</span></dt><dd>Ctrl+Tab / Ctrl+Shift+Tab</dd><dt><span data-i18n="find">Find and replace</span></dt><dd>Ctrl+F / Ctrl+H</dd><dt><span data-i18n="helpViews">Editor / Split / Read</span></dt><dd>Ctrl+1 / 2 / 3</dd><dt><span data-i18n="helpFormat">Bold / Italic / Link</span></dt><dd>Ctrl+B / Ctrl+I / Ctrl+K</dd><dt><span data-i18n="print">Print…</span></dt><dd>Ctrl+P</dd><dt><span data-i18n="zoom">Document zoom</span></dt><dd>Ctrl + / − / 0; Ctrl + ◉</dd><dt><span data-i18n="helpUndo">Undo / Redo</span></dt><dd>Ctrl+Z / Ctrl+Y</dd><dt data-i18n="helpFocus">Leave editor / indent</dt><dd>Escape, Tab / Tab</dd></dl><p class="help-note"><span data-i18n="helpNote">Drag Markdown files into the window. Local images must be inside the document folder. External images are blocked. Drafts are backed up every 10 seconds.</span></p><form method="dialog"><button class="primary"><span data-i18n="ok">Got it</span></button></form></dialog>
+</body>
+</html>
