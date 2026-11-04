@@ -17,11 +17,15 @@ Upload. Fehlendes WebView2 nur über Microsofts offizielle Verteilung installier
 
 ## Pakete
 
-| Datei | Zweck |
-|---|---|
-| `MDShow-1.0.1-Setup-x64.exe` | Installation für alle Benutzer in Program Files mit Administratorrechten, fünf Sprachen, „Öffnen mit“, Standard-Apps und optionale klassische Explorer-Befehle |
-| `MDShow-1.0.1-portable-x64.zip` | Vollständig entpacken und `MDShow.exe` starten; fünf Oberflächensprachen |
-| `MDShow-1.0.1-portable-en-x64.zip` | Gleiche Dokumentfunktionen, nur englische Oberflächenressourcen |
+**Downloads ab nur 394 KB.**
+
+| Datei | Downloadgröße | Zweck |
+| --- | ---: | --- |
+| `MDShow-1.0.1-Setup-x64.exe` | **2,41 MB** | Installation für alle Benutzer in Program Files mit Administratorrechten, fünf Sprachen, „Öffnen mit“, Standard-Apps und optionale klassische Explorer-Befehle |
+| `MDShow-1.0.1-portable-x64.zip` | **410 KB** | Vollständig entpacken und `MDShow.exe` starten; fünf Oberflächensprachen |
+| `MDShow-1.0.1-portable-en-x64.zip` | **394 KB** | Gleiche Dokumentfunktionen, nur englische Oberflächenressourcen |
+
+MD Show bleibt kompakt, da es die auf dem System installierte **Microsoft Edge WebView2 Evergreen Runtime** nutzt; die Browser-Engine ist nicht im Paket enthalten. Die Downloadgrößen sind gerundet.
 
 English-only unterstützt weiterhin russische, arabische, chinesische und gemischte
 Unicode-Dokumente. Die Spracheinstellung der Vollversion bleibt erhalten.

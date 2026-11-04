@@ -15,11 +15,15 @@
 
 ## 三种安装包
 
-| 文件 | 用途 |
-|---|---|
-| `MDShow-1.0.1-Setup-x64.exe` | 为所有用户安装到 Program Files，需要管理员权限；五种界面语言、打开方式、默认应用及可选的传统资源管理器菜单 |
-| `MDShow-1.0.1-portable-x64.zip` | 完整解压后运行 `MDShow.exe`；五种界面语言 |
-| `MDShow-1.0.1-portable-en-x64.zip` | 文档功能相同，仅包含英文界面资源 |
+**下载大小低至 394 KB。**
+
+| 文件 | 下载大小 | 用途 |
+| --- | ---: | --- |
+| `MDShow-1.0.1-Setup-x64.exe` | **2.41 MB** | 为所有用户安装到 Program Files，需要管理员权限；五种界面语言、打开方式、默认应用及可选的传统资源管理器菜单 |
+| `MDShow-1.0.1-portable-x64.zip` | **410 KB** | 完整解压后运行 `MDShow.exe`；五种界面语言 |
+| `MDShow-1.0.1-portable-en-x64.zip` | **394 KB** | 文档功能相同，仅包含英文界面资源 |
+
+MD Show 使用系统中已安装的 **Microsoft Edge WebView2 Evergreen Runtime**，因此安装包无需捆绑浏览器引擎，体积更小。下载大小已四舍五入。
 
 English-only 仍支持中文、俄文、阿拉伯文和混合 Unicode 文档，并保留完整版的
 语言设置。系统对话框可能使用 Windows 语言。ZIP 不注册文件关联，也不包含

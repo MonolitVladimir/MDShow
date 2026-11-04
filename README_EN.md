@@ -2,6 +2,18 @@
 
 For features, downloads, requirements and source builds, see the [main README](README.md).
 
+## Download
+
+**Downloads from just 394 KB.** All packages are for **Windows 11 x64**. Packages are available in [GitHub Releases](https://github.com/MonolitVladimir/MDShow/releases/latest).
+
+| File | Download size | Edition |
+| --- | ---: | --- |
+| `MDShow-1.0.1-Setup-x64.exe` | **2.41 MB** | Installer; five interface languages and Windows file associations |
+| `MDShow-1.0.1-portable-x64.zip` | **410 KB** | Portable; five interface languages |
+| `MDShow-1.0.1-portable-en-x64.zip` | **394 KB** | Portable; English interface with Unicode document support |
+
+MD Show stays compact by using the **Microsoft Edge WebView2 Evergreen Runtime** installed on your system; the browser engine is not bundled with the app. Download sizes are rounded.
+
 ## Keyboard shortcuts
 
 | Shortcut | Action |
