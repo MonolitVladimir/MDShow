@@ -37,13 +37,15 @@ Read, write and preview your documents in one desktop app — privately, offline
 
 ## Download
 
-Choose the edition that fits your workflow. All packages are for **Windows 11 x64**.
+**Downloads from just 394 KB.** Choose the edition that fits your workflow. All packages are for **Windows 11 x64**.
 
-| Edition | Download | Details |
-| :--- | :--- | :--- |
-| **Installer** | [MDShow-1.0.1-Setup-x64.exe](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.1/MDShow-1.0.1-Setup-x64.exe) | Five languages; Windows **Open with** / Default apps integration. Requires administrator approval. |
-| **Portable — multilingual** | [MDShow-1.0.1-portable-x64.zip](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.1/MDShow-1.0.1-portable-x64.zip) | Five languages; extract the complete ZIP and launch `MDShow.exe`. |
-| **Portable — English** | [MDShow-1.0.1-portable-en-x64.zip](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.1/MDShow-1.0.1-portable-en-x64.zip) | English interface; Unicode documents remain fully supported. |
+| Edition | Download | Download size | Details |
+| :--- | :--- | ---: | :--- |
+| **Installer** | [MDShow-1.0.1-Setup-x64.exe](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.1/MDShow-1.0.1-Setup-x64.exe) | **2.41 MB** | Five languages; Windows **Open with** / Default apps integration. Requires administrator approval. |
+| **Portable — multilingual** | [MDShow-1.0.1-portable-x64.zip](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.1/MDShow-1.0.1-portable-x64.zip) | **410 KB** | Five languages; extract the complete ZIP and launch `MDShow.exe`. |
+| **Portable — English** | [MDShow-1.0.1-portable-en-x64.zip](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.1/MDShow-1.0.1-portable-en-x64.zip) | **394 KB** | English interface; Unicode documents remain fully supported. |
+
+MD Show stays compact by using the **Microsoft Edge WebView2 Evergreen Runtime** installed on your system; the browser engine is not bundled with the app. Download sizes are rounded.
 
 [**All releases**](https://github.com/MonolitVladimir/MDShow/releases) · [**SHA-256 checksums**](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.1/SHA256SUMS.txt)
 
