@@ -75,6 +75,13 @@ namespace MdShow
             if (darkTheme != null && (message.Msg == 0x001A || message.Msg == 0x031A)) ApplyTheme();
         }
 
+        internal static string DisplayPath(string path)
+        {
+            // WinForms/GDI displays FSI/PDI as glyphs. Use its supported LTR
+            // embedding for paths while retaining Arabic runs inside the name.
+            return "\u202A" + path + "\u202C";
+        }
+
         internal static ThemedDialog Message(Func<bool> theme, string text, string title, MessageBoxButtons buttons, MessageBoxIcon icon)
         {
             if (buttons != MessageBoxButtons.OK && buttons != MessageBoxButtons.YesNo && buttons != MessageBoxButtons.YesNoCancel)

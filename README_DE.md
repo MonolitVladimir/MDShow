@@ -1,4 +1,4 @@
-# MD Show 1.0 — Anleitung
+# MD Show 1.0.1 — Anleitung
 
 [Sprachen](README.md) · [English](README_EN.md) · [Русский](README_RU.md) · [العربية](README_AR.md) · [简体中文](README_ZH-CN.md)
 
@@ -19,9 +19,9 @@ Upload. Fehlendes WebView2 nur über Microsofts offizielle Verteilung installier
 
 | Datei | Zweck |
 |---|---|
-| `MDShow-1.0-Setup-x64.exe` | Installation für alle Benutzer in Program Files mit Administratorrechten, fünf Sprachen, „Öffnen mit“, Standard-Apps und optionale klassische Explorer-Befehle |
-| `MDShow-1.0-portable-x64.zip` | Vollständig entpacken und `MDShow.exe` starten; fünf Oberflächensprachen |
-| `MDShow-1.0-portable-en-x64.zip` | Gleiche Dokumentfunktionen, nur englische Oberflächenressourcen |
+| `MDShow-1.0.1-Setup-x64.exe` | Installation für alle Benutzer in Program Files mit Administratorrechten, fünf Sprachen, „Öffnen mit“, Standard-Apps und optionale klassische Explorer-Befehle |
+| `MDShow-1.0.1-portable-x64.zip` | Vollständig entpacken und `MDShow.exe` starten; fünf Oberflächensprachen |
+| `MDShow-1.0.1-portable-en-x64.zip` | Gleiche Dokumentfunktionen, nur englische Oberflächenressourcen |
 
 English-only unterstützt weiterhin russische, arabische, chinesische und gemischte
 Unicode-Dokumente. Die Spracheinstellung der Vollversion bleibt erhalten.
@@ -105,7 +105,7 @@ erfordern ausdrücklich bestätigte Umstellung auf UTF-8.
 
 ## Grenzen und Sicherheit
 
-Sehr große Dokumente mit sehr vielen kurzen Zeilen können die Editor- und Barrierefreiheitsverarbeitung von WebView2 lange beschäftigen. Bitte warten Sie auf das Ende des Ladevorgangs. Dies ist eine akzeptierte Einschränkung der ersten Version; siehe RELEASE-NOTES-v1.0.md.
+Sehr große Dokumente mit sehr vielen kurzen Zeilen können die Editor- und Barrierefreiheitsverarbeitung von WebView2 lange beschäftigen. Bitte warten Sie auf das Ende des Ladevorgangs. Dies ist eine akzeptierte Einschränkung der ersten Version; siehe RELEASE-NOTES-v1.0.1.md.
 
 Dateien bis **16 MiB**, Vorschau bis **1 Mi Zeichen** Eingabe und **2 Mi Zeichen**
 HTML, begrenzte Komplexität und etwa **1,5 s** Worker-Zeitlimit. Bei zu komplexen
@@ -125,7 +125,7 @@ EXE und Setup sind **nicht signiert**; SmartScreen kann warnen. Schutzmechanisme
 nicht umgehen. SHA-256 mit der separat gelieferten Prüfsummendatei vergleichen:
 
 ```powershell
-Get-FileHash .\MDShow-1.0-portable-x64.zip -Algorithm SHA256
+Get-FileHash .\MDShow-1.0.1-portable-x64.zip -Algorithm SHA256
 ```
 
 ## Aus Quellcode erstellen
@@ -151,4 +151,4 @@ Copyright (c) 2026 **ООО «Агентство «МОНОЛИТ»**.
 **MONOLIT Agency LLC** ist die englische Anzeigeübersetzung, kein bestätigter
 separater Registername. [Eigentumserklärung](COPYRIGHT.md).
 
-Aktuelle Anforderungen und Einschränkungen stehen in den [Versionshinweisen](RELEASE-NOTES-v1.0.md).
+Aktuelle Anforderungen und Einschränkungen stehen in den [Versionshinweisen](RELEASE-NOTES-v1.0.1.md).

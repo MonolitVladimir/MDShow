@@ -21,9 +21,9 @@ using Microsoft.Web.WebView2.WinForms;
 [assembly: AssemblyCompany("MONOLIT Agency LLC / ООО «Агентство «МОНОЛИТ»")]
 [assembly: AssemblyCopyright("Copyright (c) 2026 ООО «Агентство «МОНОЛИТ»")]
 [assembly: AssemblyProduct("MD Show")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: AssemblyInformationalVersion("1.0")]
+[assembly: AssemblyVersion("1.0.1.0")]
+[assembly: AssemblyFileVersion("1.0.1.0")]
+[assembly: AssemblyInformationalVersion("1.0.1")]
 // WindowsFormsApplicationBase keys IPC by the assembly's typelib GUID + major/minor.
 #if INSTALLED
 [assembly: Guid("c5300b73-09bb-44bb-989b-f89bdcfda502")]
@@ -461,7 +461,6 @@ namespace MdShow
             menu.Closed += delegate { BeginInvoke((Action)delegate { deferral.Complete(); menu.Dispose(); }); };
             menu.Show(web, e.Location);
         }
-        private static string Isolate(string value) { return "\u2068" + value + "\u2069"; }
         private DialogResult ShowDialogMessage(string message, string title, MessageBoxButtons buttons = MessageBoxButtons.OK, MessageBoxIcon icon = MessageBoxIcon.None)
         {
             using (var dialog = ThemedDialog.Message(IsDarkWindowTheme, message, title, buttons, icon))
@@ -606,7 +605,7 @@ namespace MdShow
                 StartupTrace.Mark("fileReadEnd");
                 documents.Add(doc); activeId = doc.Id; SendDocument(doc); AddRecent(path);
             }
-            catch (Exception e) { ShowDialogMessage(L.T("openFailed", Isolate(path)) + "\n\n" + e.Message, "MD Show", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            catch (Exception e) { ShowDialogMessage(L.T("openFailed", ThemedDialog.DisplayPath(path)) + "\n\n" + e.Message, "MD Show", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void NewDocument() { var doc = new Document(); documents.Add(doc); activeId = doc.Id; SendDocument(doc); }
@@ -644,7 +643,7 @@ namespace MdShow
         private bool CanClose(Document doc)
         {
             if (!doc.Dirty) return true;
-            var choice = ShowDialogMessage(L.T("savePrompt", Isolate(doc.Name)), L.T("unsaved"), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            var choice = ShowDialogMessage(L.T("savePrompt", ThemedDialog.DisplayPath(doc.Name)), L.T("unsaved"), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             return choice == DialogResult.No || (choice == DialogResult.Yes && SaveDocument(doc, false));
         }
 
@@ -709,7 +708,7 @@ namespace MdShow
                 string preserved = RecoveryFile + ".unreadable-" + Guid.NewGuid().ToString("N") + ".json";
                 try { File.Copy(RecoveryFile, preserved); }
                 catch (Exception) { recoveryWritable = false; preserved = RecoveryFile; }
-                ShowDialogMessage(L.T("recoveryUnreadable", Isolate(preserved)) +
+                ShowDialogMessage(L.T("recoveryUnreadable", ThemedDialog.DisplayPath(preserved)) +
                     (recoveryWritable ? "" : "\n" + L.T("recoveryDisabled")) + "\n\n" + e.Message, "MD Show");
             }
         }

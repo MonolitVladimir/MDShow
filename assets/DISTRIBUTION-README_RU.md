@@ -1,4 +1,4 @@
-# MD Show 1.0
+# MD Show 1.0.1
 
 Просмотр и редактирование Markdown на Windows 11 x64. Нужны .NET Framework 4.8
 и системный WebView2 Evergreen; браузерный движок не включён в пакет.

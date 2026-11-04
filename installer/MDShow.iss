@@ -1,5 +1,5 @@
 #ifndef AppVersion
-#define AppVersion "1.0"
+#define AppVersion "1.0.1"
 #endif
 [Setup]
 AppId={{D4F607D5-40AE-496C-9124-1161A6DE4A11}
@@ -26,7 +26,7 @@ ChangesAssociations=yes
 CloseApplications=no
 RestartApplications=no
 SetupLogging=yes
-VersionInfoVersion=1.0.0.0
+VersionInfoVersion=1.0.1.0
 LicenseFile=..\LICENSE
 UninstallDisplayName=MD Show
 
@@ -44,18 +44,18 @@ Name: "contextmenu"; Description: "{cm:setupContext}"; Flags: checkedonce
 Name: "desktopicon"; Description: "{cm:setupDesktop}"; Flags: unchecked
 
 [Files]
-Source: "..\dist\public-1.0\installed\MDShow.SetupGuard.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\dist\public-1.0\installed\MDShow.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\dist\public-1.0\installed\MDShow.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\dist\public-1.0\installed\Microsoft.Web.WebView2.Core.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\dist\public-1.0\installed\Microsoft.Web.WebView2.WinForms.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\dist\public-1.0\installed\WebView2Loader.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\dist\public-1.0\installed\THIRD-PARTY-NOTICES.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\dist\public-1.0\installed\README.md"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\dist\public-1.0\installed\README_RU.md"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\dist\public-1.0\installed\Welcome.md"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\dist\public-1.0\installed\LICENSE"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\dist\public-1.0\installed\BRANDING.md"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\public-1.0.1\installed\MDShow.SetupGuard.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\public-1.0.1\installed\MDShow.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\public-1.0.1\installed\MDShow.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\public-1.0.1\installed\Microsoft.Web.WebView2.Core.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\public-1.0.1\installed\Microsoft.Web.WebView2.WinForms.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\public-1.0.1\installed\WebView2Loader.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\public-1.0.1\installed\THIRD-PARTY-NOTICES.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\public-1.0.1\installed\README.md"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\public-1.0.1\installed\README_RU.md"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\public-1.0.1\installed\Welcome.md"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\public-1.0.1\installed\LICENSE"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\public-1.0.1\installed\BRANDING.md"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{autoprograms}\MD Show"; Filename: "{app}\MDShow.exe"

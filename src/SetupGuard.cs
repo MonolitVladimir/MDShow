@@ -9,8 +9,8 @@ using System.Text;
 [assembly: System.Reflection.AssemblyTitle("MD Show Setup Guard")]
 [assembly: System.Reflection.AssemblyCompany("MONOLIT Agency LLC / ООО «Агентство «МОНОЛИТ»")]
 [assembly: System.Reflection.AssemblyCopyright("Copyright (c) 2026 ООО «Агентство «МОНОЛИТ»")]
-[assembly: System.Reflection.AssemblyVersion("1.0.0.0")]
-[assembly: System.Reflection.AssemblyFileVersion("1.0.0.0")]
+[assembly: System.Reflection.AssemblyVersion("1.0.1.0")]
+[assembly: System.Reflection.AssemblyFileVersion("1.0.1.0")]
 
 namespace MdShow
 {

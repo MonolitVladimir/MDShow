@@ -1,4 +1,4 @@
-# MD Show 1.0 — English quick guide
+# MD Show 1.0.1 — English quick guide
 
 For features, downloads, requirements and source builds, see the [main README](README.md).
 
@@ -18,6 +18,6 @@ For features, downloads, requirements and source builds, see the [main README](R
 
 **File → Preferences** contains theme, word wrap, language and outline settings.
 
-The English-only portable edition preserves Unicode/Arabic/CJK document support and all document features. Some native dialogs use the Windows display language. Files with many short lines may slow down the editor; see the [release notes](RELEASE-NOTES-v1.0.md).
+The English-only portable edition preserves Unicode/Arabic/CJK document support and all document features. Some native dialogs use the Windows display language. Files with many short lines may slow down the editor; see the [release notes](RELEASE-NOTES-v1.0.1.md).
 
 Recovery drafts and recent paths are unencrypted local data. Save recovered drafts as regular Markdown files and maintain independent backups. See [SECURITY.md](SECURITY.md).

@@ -1,4 +1,4 @@
-# MD Show 1.0
+# MD Show 1.0.1
 
 Lightweight offline Markdown viewer/editor for Windows 11 x64.
 Requires .NET Framework 4.8 and system Microsoft Edge WebView2 Evergreen.
@@ -57,7 +57,7 @@ The header contains File (Alt+F), Save, Find, view modes and zoom; settings are 
 File > Preferences.
 
 EXE/Setup are unsigned; Windows may display a warning. Do not bypass protection.
-Compare `Get-FileHash .\MDShow-1.0-portable-x64.zip -Algorithm SHA256` with the
+Compare `Get-FileHash .\MDShow-1.0.1-portable-x64.zip -Algorithm SHA256` with the
 separately supplied SHA256SUMS.txt. Use the corresponding name for other packages.
 
 Original code: MIT (LICENSE). Libraries: THIRD-PARTY-NOTICES.txt.

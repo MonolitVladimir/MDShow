@@ -11,7 +11,7 @@
 A fast, lightweight Markdown viewer and editor for Windows 11.  
 Read, write and preview your documents in one desktop app — privately, offline and without an account.
 
-[**Download v1.0.0**](https://github.com/MonolitVladimir/MDShow/releases/tag/v1.0.0) · [Release notes](RELEASE-NOTES-v1.0.md) · [Source code](https://github.com/MonolitVladimir/MDShow)
+[**Download v1.0.1**](https://github.com/MonolitVladimir/MDShow/releases/tag/v1.0.1) · [Release notes](RELEASE-NOTES-v1.0.1.md) · [Source code](https://github.com/MonolitVladimir/MDShow)
 
 **Windows 11 x64** · **Five UI languages** · **No telemetry** · **MIT-licensed source**
 
@@ -41,13 +41,13 @@ Choose the edition that fits your workflow. All packages are for **Windows 11 x6
 
 | Edition | Download | Details |
 | :--- | :--- | :--- |
-| **Installer** | [MDShow-1.0-Setup-x64.exe](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.0/MDShow-1.0-Setup-x64.exe) | Five languages; Windows **Open with** / Default apps integration. Requires administrator approval. |
-| **Portable — multilingual** | [MDShow-1.0-portable-x64.zip](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.0/MDShow-1.0-portable-x64.zip) | Five languages; extract the complete ZIP and launch `MDShow.exe`. |
-| **Portable — English** | [MDShow-1.0-portable-en-x64.zip](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.0/MDShow-1.0-portable-en-x64.zip) | English interface; Unicode documents remain fully supported. |
+| **Installer** | [MDShow-1.0.1-Setup-x64.exe](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.1/MDShow-1.0.1-Setup-x64.exe) | Five languages; Windows **Open with** / Default apps integration. Requires administrator approval. |
+| **Portable — multilingual** | [MDShow-1.0.1-portable-x64.zip](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.1/MDShow-1.0.1-portable-x64.zip) | Five languages; extract the complete ZIP and launch `MDShow.exe`. |
+| **Portable — English** | [MDShow-1.0.1-portable-en-x64.zip](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.1/MDShow-1.0.1-portable-en-x64.zip) | English interface; Unicode documents remain fully supported. |
 
-[**All releases**](https://github.com/MonolitVladimir/MDShow/releases) · [**SHA-256 checksums**](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.0/SHA256SUMS.txt)
+[**All releases**](https://github.com/MonolitVladimir/MDShow/releases) · [**SHA-256 checksums**](https://github.com/MonolitVladimir/MDShow/releases/download/v1.0.1/SHA256SUMS.txt)
 
-> **Windows security notice:** Version 1.0.0 binaries are **not digitally signed**. Windows may identify the publisher as unknown or show a SmartScreen warning. Verify downloads against `SHA256SUMS.txt`; do not disable Windows security protections.
+> **Windows security notice:** Version 1.0.1 binaries are **not digitally signed**. Windows may identify the publisher as unknown or show a SmartScreen warning. Verify downloads against `SHA256SUMS.txt`; do not disable Windows security protections.
 
 ### Requirements
 
@@ -82,7 +82,7 @@ Settings, recent-file paths and recovery drafts are stored under `%LOCALAPPDATA%
 - Maximum supported document size: **16 MiB**. Preview has a separate input limit of **1 million characters** and additional rendering/complexity limits.
 - Very large or unusually structured documents can temporarily slow editing.
 - Mermaid, LaTeX, remote images and plugins are not supported.
-- Some display-scaling, input-method and accessibility configurations have not been manually verified; see the [v1.0.0 release notes](RELEASE-NOTES-v1.0.md).
+- Some display-scaling, input-method and accessibility configurations have not been manually verified; see the [v1.0.1 release notes](RELEASE-NOTES-v1.0.1.md).
 
 ## Build from source
 

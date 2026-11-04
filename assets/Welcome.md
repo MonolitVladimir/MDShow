@@ -1,4 +1,4 @@
-# Welcome to MD Show 1.0
+# Welcome to MD Show 1.0.1
 
 A lightweight Markdown viewer and editor for Windows 11.
 

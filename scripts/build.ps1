@@ -12,8 +12,8 @@ try {
     }
     $archives = @()
     foreach ($edition in 'installed','full','en') {
-        $directory = if ($edition -eq 'installed') { 'dist\public-1.0\installed' } elseif ($edition -eq 'full') { 'dist\public-1.0\portable' } else { 'dist\public-1.0\portable-en' }
-        $generated = Join-Path 'artifacts\public-1.0' $edition
+        $directory = if ($edition -eq 'installed') { 'dist\public-1.0.1\installed' } elseif ($edition -eq 'full') { 'dist\public-1.0.1\portable' } else { 'dist\public-1.0.1\portable-en' }
+        $generated = Join-Path 'artifacts\public-1.0.1' $edition
         New-Item -ItemType Directory -Force $directory,$generated | Out-Null
         $cscArgs = @('/nologo','/target:winexe','/platform:x64','/optimize+','/utf8output','/codepage:65001','/warnaserror+',
             "/out:$directory\MDShow.exe",'/win32manifest:src\app.manifest','/win32icon:assets\app.ico',
@@ -59,7 +59,7 @@ try {
         }
         # Enumerate release files explicitly; private data and build outputs are excluded.
         $files = $names | ForEach-Object { Get-Item -LiteralPath (Join-Path $directory $_) }
-        $archive = if ($edition -eq 'full') { 'dist\MDShow-1.0-portable-x64.zip' } else { 'dist\MDShow-1.0-portable-en-x64.zip' }
+        $archive = if ($edition -eq 'full') { 'dist\MDShow-1.0.1-portable-x64.zip' } else { 'dist\MDShow-1.0.1-portable-en-x64.zip' }
         Compress-Archive -LiteralPath $files.FullName -DestinationPath $archive -Force
         $archives += Get-Item -LiteralPath $archive
     }
@@ -69,9 +69,9 @@ try {
         & "$PSScriptRoot\generate-installer-messages.ps1"
         & $iscc installer\MDShow.iss
         if ($LASTEXITCODE -ne 0) { throw 'Installer compilation failed' }
-        $archives += Get-Item -LiteralPath dist\MDShow-1.0-Setup-x64.exe
+        $archives += Get-Item -LiteralPath dist\MDShow-1.0.1-Setup-x64.exe
     }
-    $archives | Get-FileHash -Algorithm SHA256 | ForEach-Object { "$($_.Hash.ToLower())  $([IO.Path]::GetFileName($_.Path))" } | Set-Content -LiteralPath dist\public-1.0\SHA256SUMS.txt -Encoding ascii
+    $archives | Get-FileHash -Algorithm SHA256 | ForEach-Object { "$($_.Hash.ToLower())  $([IO.Path]::GetFileName($_.Path))" } | Set-Content -LiteralPath dist\public-1.0.1\SHA256SUMS.txt -Encoding ascii
     $archives | Select-Object Name,Length
 }
 finally { Pop-Location }

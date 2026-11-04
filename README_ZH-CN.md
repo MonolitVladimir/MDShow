@@ -1,4 +1,4 @@
-# MD Show 1.0 — 使用指南
+# MD Show 1.0.1 — 使用指南
 
 [语言索引](README.md) · [English](README_EN.md) · [Русский](README_RU.md) · [Deutsch](README_DE.md) · [العربية](README_AR.md)
 
@@ -17,9 +17,9 @@
 
 | 文件 | 用途 |
 |---|---|
-| `MDShow-1.0-Setup-x64.exe` | 为所有用户安装到 Program Files，需要管理员权限；五种界面语言、打开方式、默认应用及可选的传统资源管理器菜单 |
-| `MDShow-1.0-portable-x64.zip` | 完整解压后运行 `MDShow.exe`；五种界面语言 |
-| `MDShow-1.0-portable-en-x64.zip` | 文档功能相同，仅包含英文界面资源 |
+| `MDShow-1.0.1-Setup-x64.exe` | 为所有用户安装到 Program Files，需要管理员权限；五种界面语言、打开方式、默认应用及可选的传统资源管理器菜单 |
+| `MDShow-1.0.1-portable-x64.zip` | 完整解压后运行 `MDShow.exe`；五种界面语言 |
+| `MDShow-1.0.1-portable-en-x64.zip` | 文档功能相同，仅包含英文界面资源 |
 
 English-only 仍支持中文、俄文、阿拉伯文和混合 Unicode 文档，并保留完整版的
 语言设置。系统对话框可能使用 Windows 语言。ZIP 不注册文件关联，也不包含
@@ -90,7 +90,7 @@ Alt+F 打开菜单，方向键移动焦点，Escape 关闭菜单。
 
 ## 限制与安全
 
-包含大量短行的大型文档可能导致 WebView2 编辑器和辅助功能处理耗时较长。请等待加载完成。这是首版已接受的限制，参见 RELEASE-NOTES-v1.0.md。
+包含大量短行的大型文档可能导致 WebView2 编辑器和辅助功能处理耗时较长。请等待加载完成。这是首版已接受的限制，参见 RELEASE-NOTES-v1.0.1.md。
 
 文件上限 **16 MiB**。预览输入上限 **1 Mi 字符**，HTML 上限 **2 Mi 字符**，
 另有限制复杂度和约 **1.5 秒**的工作线程超时。复杂预览可能被拒绝，编辑器仍可用。
@@ -106,7 +106,7 @@ EXE/Setup **未签名**，可能触发 SmartScreen 提示；不要绕过保护�
 将 SHA-256 与单独提供的校验文件比较：
 
 ```powershell
-Get-FileHash .\MDShow-1.0-portable-x64.zip -Algorithm SHA256
+Get-FileHash .\MDShow-1.0.1-portable-x64.zip -Algorithm SHA256
 ```
 
 ## 从源代码构建
@@ -131,4 +131,4 @@ Copyright (c) 2026 **ООО «Агентство «МОНОЛИТ»**。
 **MONOLIT Agency LLC** 是英文显示译名，并非已核实的另一个注册法律名称。
 参见[权属说明](COPYRIGHT.md)。
 
-当前要求和已知限制参见[发布说明](RELEASE-NOTES-v1.0.md)。
+当前要求和已知限制参见[发布说明](RELEASE-NOTES-v1.0.1.md)。

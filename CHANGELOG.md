@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.1] — 2026-11-04
+
+### Fixed
+
+- Removed visible direction-control symbols beside quoted file names in native save, open-error and recovery dialogs.
+- Preserved the direction of Arabic text within file names.
+
+See [release notes](RELEASE-NOTES-v1.0.1.md).
+
 ## [1.0.0] — 2026-11-03
 
 First public release of MD Show for Windows 11 x64.
